@@ -1,0 +1,68 @@
+.invitacion-fondo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh; /* ocupa casi toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa beige translúcida sobre la foto para mejorar legibilidad */
+.invitacion-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(240, 236, 231, 0.35); /* beige suave con transparencia */
+  backdrop-filter: brightness(0.9);
+}
+
+.invitacion-texto {
+  position:relative; /* para quedar sobre el overlay */
+  z-index: 1;
+  transform:translateY(-150px);
+  
+}
+
+.invitacion-texto h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #fbfaf9;
+  text-shadow: 0 2px 8px rgba(253, 251, 251, 0.3);
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(6, 7, 7, 0.6),
+    0 0 20px rgba(102, 201, 216, 0.4),
+    0 0 30px rgba(78, 213, 237, 0.3);
+}
+
+.invitacion-texto h2 {
+  font-size: 4rem;
+  color: #fbfaf9; 
+  text-shadow: 0 2px 8px rgba(253, 251, 251, 0.3);
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 10px rgba(6, 7, 7, 0.6),
+    0 0 20px rgba(102, 201, 216, 0.4),
+    0 0 30px rgba(78, 213, 237, 0.3);
+
+}
+/* 💫 Versión móvil */
+@media (max-width: 768px) {
+  .invitacion-fondo {
+    height: 70vh;
+  }
+
+  .invitacion-texto h1 {
+    font-size: 3rem;
+  }
+
+  .invitacion-texto h2 {
+    font-size: 3rem;
+  }
+}
+
