@@ -27,7 +27,7 @@ export default function Music() {
         {playing ? "🔊 Pausar música" : "🎶 Reproducir música"}
       </button>
 
-      <audio ref={audioRef} src={cancion} loop preload="metadata" />
+      <audio ref={audioRef} src={cancion} loop preload="none" controls={false}/>
     </section>
   );
 }

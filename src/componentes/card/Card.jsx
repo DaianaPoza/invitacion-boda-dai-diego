@@ -16,7 +16,7 @@ const InfoCard = ({
 }) => {
   return (
     <Card className={className} style={style}>
-      {imgSrc && <Card.Img variant="top" src={imgSrc} alt={imgAlt} />}
+      {imgSrc && <Card.Img variant="top" src={imgSrc} alt={imgAlt} loading='lazy' decoding='async'/>}
       <Card.Body>
         {title && <Card.Title>{title}</Card.Title>}
         {text && <Card.Text>{text}</Card.Text>}

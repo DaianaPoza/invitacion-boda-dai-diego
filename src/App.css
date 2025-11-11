@@ -92,11 +92,22 @@ font-family: "Dancing Script", cursive;
   
  
   section {
-    opacity: -1;
-    transform: translateY(50px);
-    filter: blur(8px); /* 💫 difuminado inicial */
-    transition: opacity 0.3s linear, transform 0.3s linear, filter 0.3s linear;
-    will-change: opacity, transform, filter;
+    opacity: 0;                        
+    transform: translateY(24px);
+    transition: opacity .5s ease-out, transform .5s ease-out;
+   
+    
   }
   
-  
+
+@media (max-width: 768px) {
+  section {
+    filter: none;                     /* 💡 sacamos blur en móvil: mucho más fluido */
+    transition: opacity .6s ease-out, transform .6s ease-out;
+  }
+}
+
+section.is-visible {
+  opacity: 1;
+  transform: none;
+}

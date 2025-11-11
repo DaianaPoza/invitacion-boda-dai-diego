@@ -18,27 +18,36 @@ import Music from "./componentes/music/Music.jsx";
 function App() {
 
   useEffect(() => {
-    const secciones = document.querySelectorAll("section");
-
-    const mostrar = () => {
-      secciones.forEach((sec, index) => {
-        const rect = sec.getBoundingClientRect();
-        const delay = index * 40; // 💫 pequeño retraso entre secciones
-
-        if (rect.top < window.innerHeight - 120) {
-          setTimeout(() => {
-            sec.style.opacity = 1;
-            sec.style.transform = "translateY(0)";
-            sec.style.filter = "blur(0px)";
-          }, delay);
-        }
-      });
-    };
-
-    window.addEventListener("scroll", mostrar);
-    mostrar(); // ejecuta una vez al cargar
-    return () => window.removeEventListener("scroll", mostrar);
+    const secs = Array.from(document.querySelectorAll("section"));
+    if (!secs.length) return;
+  
+    // 👇 muestra inmediatamente las dos primeras secciones (Header + la que sigue)
+    secs.slice(0, 2).forEach(el => el.classList.add("is-visible"));
+  
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target); // solo una vez
+          }
+        });
+      },
+      {
+        threshold: 0,           // dispara apenas asoma
+        root: null,
+        rootMargin: "200px 0px 0px 0px", // 💡 revela ~200px ANTES de entrar
+      }
+    );
+  
+    // saltamos las 2 primeras que ya mostramos
+    secs.slice(2).forEach((s) => io.observe(s));
+    return () => io.disconnect();
   }, []);
+  
+  
+
+
 
 
 
@@ -49,7 +58,7 @@ function App() {
     <div className='body'>
   <Header />
 
-  <Music />
+   <Music /> 
 
   <Fecha />
   <Seccion />

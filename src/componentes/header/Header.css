@@ -17,7 +17,7 @@
   position: absolute;
   inset: 0;
   background: rgba(240, 236, 231, 0.35); /* beige suave con transparencia */
-  backdrop-filter: brightness(0.9);
+  
 }
 
 .invitacion-texto {
@@ -32,7 +32,7 @@
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: #fbfaf9;
-  text-shadow: 0 2px 8px rgba(253, 251, 251, 0.3);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25 );
   letter-spacing: 2px;
   text-shadow:
     0 0 10px rgba(6, 7, 7, 0.6),
@@ -43,7 +43,7 @@
 .invitacion-texto h2 {
   font-size: 4rem;
   color: #fbfaf9; 
-  text-shadow: 0 2px 8px rgba(253, 251, 251, 0.3);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   letter-spacing: 2px;
   text-shadow:
     0 0 10px rgba(6, 7, 7, 0.6),
@@ -59,10 +59,46 @@
 
   .invitacion-texto h1 {
     font-size: 3rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,.2);
   }
 
   .invitacion-texto h2 {
     font-size: 3rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,.2);
   }
+}
+
+.invitacion-fondo {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.invitacion-fondo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Tu capa beige translúcida */
+.invitacion-fondo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(240, 236, 231, 0.35);
+}
+
+/* Texto encima */
+.invitacion-texto {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-150px);
 }
 
