@@ -152,6 +152,9 @@ h2 {
   cursor: pointer;
   font-family: "Playfair Display", serif;
   transition: all 0.3s ease;
+  flex-shrink: 0;
+  outline: none;
+  box-shadow: none;
 }
 
 .boton-copiar:hover {
@@ -187,6 +190,7 @@ h2 {
   justify-content: space-between; /* separa texto y botón */
   gap: 0.5rem;
   flex-wrap: nowrap; /* evita que salte de línea */
+  white-space: nowrap;
 }
 
 /* Que el texto del CBU se mantenga legible en pantallas chicas */
@@ -199,4 +203,29 @@ h2 {
 .linea-alias span {
   flex: 1;
   overflow-wrap: anywhere;
+}
+
+.boton-copiar:focus {
+ 
+  box-shadow: 0 0 6px rgba(184, 164, 122, 0.6);
+}
+
+
+
+.linea-dato {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;       /* evita que el botón salte abajo */
+}
+
+.dato-label {
+  white-space: nowrap;     /* "CBU:" y "Alias:" no se parten */
+  font-weight: 700;
+  color: #2b2a28;
+}
+
+.dato-valor {
+  flex: 1;                 /* ocupa el espacio disponible */
+  overflow-wrap: anywhere; /* si el número es muy largo, puede partirse */
 }

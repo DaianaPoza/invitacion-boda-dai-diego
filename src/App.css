@@ -91,4 +91,12 @@ font-family: "Dancing Script", cursive;
   }
   
  
+  section {
+    opacity: -1;
+    transform: translateY(50px);
+    filter: blur(8px); /* 💫 difuminado inicial */
+    transition: opacity 0.3s linear, transform 0.3s linear, filter 0.3s linear;
+    will-change: opacity, transform, filter;
+  }
+  
   

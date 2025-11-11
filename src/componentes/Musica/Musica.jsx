@@ -12,7 +12,7 @@ function Musica() {
 
         <h2 className="spotify__text">
           ¡La fiesta también es tuya!  
-          <h3 className="spotify__text">Agregá tus canciones favoritas a nuestra lista en Spotify</h3>
+          <h3 className="spotify__text">Agregá tus canciones favoritas a nuestra lista</h3>
           </h2>
         
 

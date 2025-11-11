@@ -1,4 +1,5 @@
-import React from 'react';
+//import React from 'react';
+import React, { useEffect } from "react";
 import './App.css'
 import Header from './componentes/header/Header'
 import Seccion from './componentes/seccion/Seccion'
@@ -15,6 +16,33 @@ import Music from "./componentes/music/Music.jsx";
 
 
 function App() {
+
+  useEffect(() => {
+    const secciones = document.querySelectorAll("section");
+
+    const mostrar = () => {
+      secciones.forEach((sec, index) => {
+        const rect = sec.getBoundingClientRect();
+        const delay = index * 40; // 💫 pequeño retraso entre secciones
+
+        if (rect.top < window.innerHeight - 120) {
+          setTimeout(() => {
+            sec.style.opacity = 1;
+            sec.style.transform = "translateY(0)";
+            sec.style.filter = "blur(0px)";
+          }, delay);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", mostrar);
+    mostrar(); // ejecuta una vez al cargar
+    return () => window.removeEventListener("scroll", mostrar);
+  }, []);
+
+
+
+
 
   return (
     <>

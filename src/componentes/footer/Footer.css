@@ -84,7 +84,60 @@
   }
 }
 
+
+
+.footer-card {
+  position: relative;
+  background: linear-gradient(180deg, #fbf8f3, #fff 40%, #fbf8f3);
+  border: 1px solid #eadfce;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(184, 164, 122, 0.25);
+  animation: respirar 6s ease-in-out infinite;
+  overflow: hidden;
+  transition: transform 0.6s ease;
   
   
+}
+
+/* 💛 Efecto de respiración */
+@keyframes respirar {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* ✨ Brillo dorado sutil */
+.footer-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(184, 164, 122, 0.15),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: brillo 8s ease-in-out infinite;
+}
+
+/* ✨ Movimiento del reflejo */
+@keyframes brillo {
+  0% { left: -50%; }
+  50% { left: 120%; }
+  100% { left: -50%; }
+}
+
+/* Texto dentro del footer */
+.footer-card p,
+.footer-card span {
+  font-family: "Playfair Display", serif;
+  color: #4a4438;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+
+}
 
   
