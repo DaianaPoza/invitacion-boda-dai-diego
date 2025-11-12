@@ -8,11 +8,13 @@
     font-weight: bold; 
     margin: 0.5rem auto; /* <-- centrado horizontal */
   text-align: center;  /* <-- centra el texto dentro */
+  
       
   }
   
 .datos .linea {
   white-space: nowrap;
+  font-size: 2rem;
 }
 
 
