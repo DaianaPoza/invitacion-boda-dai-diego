@@ -19,6 +19,8 @@
 @media (max-width: 768px) {
   .datos { 
     padding-inline: 12px;           /* aire a los lados */
+    font-size: 2rem;
+    margin: 2rem;
   }
   .datos .linea {
     white-space: normal;            /* ✅ permitir salto */
