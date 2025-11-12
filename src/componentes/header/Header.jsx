@@ -9,8 +9,6 @@ function Header() {
         src={fondo}
         alt="Fondo invitación Dai & Diego"
         className="invitacion-fondo-img"
-        loading="lazy"
-        decoding="async"
       />
 
       <div className="invitacion-texto">
