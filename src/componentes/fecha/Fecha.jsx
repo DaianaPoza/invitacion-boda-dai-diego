@@ -3,7 +3,7 @@ import "./Fecha.css";
 
 function Fecha() {
     return (
-        <section className="fecha">
+        
         <div className="datos">
           <p className="linea"> Te esperamos el Sábado</p>
           <p className="linea"> 31 de Enero del 2026</p>
@@ -12,7 +12,7 @@ function Fecha() {
           <p className="linea venue"> Sociedad Rural </p>
           <p className="linea venue"> Bahía Blanca</p>
         </div>
-        </section>
+       
     )
 }
 

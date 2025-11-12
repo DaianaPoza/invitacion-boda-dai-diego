@@ -1,5 +1,4 @@
 //import React from 'react';
-import React, { useEffect } from "react";
 import './App.css'
 import Header from './componentes/header/Header'
 import Seccion from './componentes/seccion/Seccion'
