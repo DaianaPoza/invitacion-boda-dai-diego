@@ -28,11 +28,12 @@
 }
 
 .invitacion-texto h1 {
-  font-size: 5rem;
+ /* font-size: 5rem; */
+ font-size: clamp(3.5rem, 9vw, 5rem);  /* fluido */
   font-weight: 600;
   margin-bottom: 0.8rem;
   color: #fbfaf9;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25 );
+ 
   letter-spacing: 2px;
   text-shadow:
     0 0 10px rgba(6, 7, 7, 0.6),
@@ -41,9 +42,10 @@
 }
 
 .invitacion-texto h2 {
-  font-size: 4rem;
+ /* font-size: 4rem; */
+ font-size: clamp(3rem, 6vw, 4rem);
   color: #fbfaf9; 
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
   letter-spacing: 2px;
   text-shadow:
     0 0 10px rgba(6, 7, 7, 0.6),
@@ -56,16 +58,7 @@
   .invitacion-fondo {
     height: 70vh;
   }
-
-  .invitacion-texto h1 {
-    font-size: 3rem;
-    text-shadow: 0 1px 4px rgba(0,0,0,.2);
-  }
-
-  .invitacion-texto h2 {
-    font-size: 3rem;
-    text-shadow: 0 1px 4px rgba(0,0,0,.2);
-  }
+  
 }
 
 .invitacion-fondo {
@@ -93,6 +86,7 @@
   position: absolute;
   inset: 0;
   background: rgba(240, 236, 231, 0.35);
+  
 }
 
 /* Texto encima */
@@ -100,5 +94,37 @@
   position: relative;
   z-index: 1;
   transform: translateY(-150px);
+  
 }
+
+
+
+
+
+
+
+
+/* 📱 Solo en móvil: fade-in suave una sola vez */
+@media (max-width: 768px) {
+  .invitacion-texto h1 {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: h2FadeIn 1000ms ease-out forwards;
+  }
+
+  .invitacion-texto h2 {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: h2FadeIn 1000ms ease-out forwards;
+  }
+}
+
+@keyframes h2FadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 

@@ -29,5 +29,6 @@
     text-wrap: pretty;              /* saltos más lindos */
     overflow-wrap: anywhere;        /* por si alguna palabra queda larguísima */
   }
+
 }
 
