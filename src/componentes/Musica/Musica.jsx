@@ -17,7 +17,7 @@ function Musica() {
         
 
         <a
-          href="https://open.spotify.com/playlist/621qt70RYhiIWP3HhhOdas?si=UL3rHtcaTWWrOvqj07pfIQ&pt=ba266ca5f201c19dd18fdb2e4158a2ea&pi=-OYuQV5-QJuAs"
+          href="https://open.spotify.com/playlist/621qt70RYhiIWP3HhhOdas"
           target="_blank"
           rel="noopener noreferrer"
           className="spotify__button"
