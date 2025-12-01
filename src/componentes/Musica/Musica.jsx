@@ -17,7 +17,7 @@ function Musica() {
         
 
         <a
-          href="https://open.spotify.com/playlist/621qt70RYhiIWP3HhhOdas?si=0BhLsGaDR7OkjbR_L_gIKQ&pt=7a711bf135032fe5a095f69945ae39e6&pi=omxcEoNwQZCnS"
+          href="Hagamos una playlist en equipo. Unite y editala: Boda D&D https://open.spotify.com/playlist/621qt70RYhiIWP3HhhOdas?si=6Lp5BY55RfG6wOjCWGXQ9w&pt=faa7347c799f1522e576105ee8a28290&pi=gm-UhSkiRKqcD"
           target="_blank"
           rel="noopener noreferrer"
           className="spotify__button"
